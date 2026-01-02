@@ -1,13 +1,17 @@
+import React from 'react';
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+
 export function NavBar() {
     return (
         <div className="sidebar">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><FaGithub size={24} /> Github</li>
+                <li><FaLinkedin size={24} /> LinkedIn</li>
+                <li><MdEmail size={24} /> Email</li>
             </ul>
         </div>
 
     );
 }
+

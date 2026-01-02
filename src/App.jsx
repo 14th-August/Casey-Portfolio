@@ -1,4 +1,5 @@
-import { NavBar } from './components/Sidebar'
+import { NavBar } from './components/Sidebar';
+import React from 'react';
 import './App.css'
 
 function App() {
