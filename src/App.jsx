@@ -1,12 +1,11 @@
-import { NavBar } from './components/Sidebar';
-import React from 'react';
+import { SideBar } from './components/Sidebar';
 import './App.css'
 
 function App() {
 
   return (
     <div className="App">
-      <NavBar />
+      <SideBar />
     </div>
   );
 }
