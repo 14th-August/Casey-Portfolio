@@ -1,40 +1,80 @@
 .sidebar {
     height: 100%;
-    width: 300px;
     background-color: rgb(245, 164, 164);
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Pushes the footer to the bottom */
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
 }
 
+/* Width states */
+.sidebar.expanded {
+    width: 300px;
+}
+
+.sidebar.collapsed {
+    width: 70px;
+}
+
+/* Header styling */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    min-height: 60px;
+}
+
+.user-name {
+    margin: 0;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    color: #333;
+}
+
+.toggle-btn {
+    background: rgba(0, 0, 0, 0.05);
+    border: none;
+    border-radius: 4px;
+    padding: 5px 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* List adjustments */
 .sidebar-list {
     list-style: none;
     padding: 0;
-    margin: 20px 0;
+    margin: 10px 0;
+    flex-grow: 1;
 }
 
 .sidebar-item {
     display: flex;
     align-items: center;
-    padding: 12px 20px;
+    padding: 15px 23px; /* Adjusted to keep icons centered when collapsed */
     cursor: pointer;
-    transition: background-color 0.2s ease;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333; /* Dark text for contrast against the pink */
+    transition: background-color 0.2s;
+    white-space: nowrap;
 }
 
 .sidebar-item:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Subtle highlight */
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .sidebar-icon {
-    display: flex;
-    align-items: center;
-    margin-right: 15px; /* Space between icon and text */
     min-width: 24px;
+    display: flex;
+    justify-content: center;
 }
 
-.sidebar-footer {
-    padding-bottom: 20px;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+.sidebar-label {
+    margin-left: 15px;
+    font-family: sans-serif;
 }

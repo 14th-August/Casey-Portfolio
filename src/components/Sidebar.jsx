@@ -1,7 +1,9 @@
-import { FaGithub, FaCode } from "react-icons/fa";
+import { FaGithub, FaCode, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { HiOutlineMailOpen, HiOutlineTranslate  } from "react-icons/hi";
 import { RiInformationLine } from "react-icons/ri";
 import { IoShareSocial } from "react-icons/io5";
+import { useState } from "react";
+
 import './sidebar.css';
 
 const navLinks = [
@@ -13,13 +15,25 @@ const navLinks = [
 ];
 
 export function SideBar() {
+    const [isExpanded, setIsExpanded] = useState(true);
+
     return (
-        <nav className="sidebar">
+        <nav className={`sidebar ${isExpanded ? "expanded" : "collapsed"}`}>
+            <div className="sidebar-header">
+                {isExpanded && <h2 className="user-name">Casey Adams</h2>}
+                <button
+                    className="toggle-btn"
+                    onClick={() => setIsExpanded(!isExpanded)}
+                >
+                    {isExpanded ? <FaChevronLeft /> : <FaChevronRight />}
+                </button>
+            </div>
+
             <ul className="sidebar-list">
                 {navLinks.map((link) => (
                     <li key={link.id} className="sidebar-item">
                         <span className="sidebar-icon">{link.icon}</span>
-                        <span className="sidebar-label">{link.label}</span>
+                        {isExpanded && <span className="sidebar-label">{link.label}</span>}
                     </li>
                 ))}
             </ul>
