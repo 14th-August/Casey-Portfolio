@@ -1,12 +1,26 @@
+import { useState } from 'react';
 import { SideBar } from './components/Sidebar';
-import { Clock } from './components/Clock';
+import { Clock } from './components/clock';
 import './App.css'
 
 function App() {
+  const [isTokyo, setIsTokyo] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <div className="App">
-        <SideBar />
-        <Clock />
+        <SideBar 
+          isExpanded={isExpanded}
+          setIsExpanded={setIsExpanded}
+          toggleTimezone={() => setIsTokyo(!isTokyo)}
+        />
+
+        <main className="main-content">
+            <header className="top-bar">
+          <Clock isTokyo={isTokyo} />
+        </header>
+        
+        </main>
     </div>
   );
 }

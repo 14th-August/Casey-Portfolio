@@ -14,9 +14,7 @@ const navLinks = [
     { id: 'contact', icon: <HiOutlineMailOpen  size={24} />, label: 'Contact' },
 ];
 
-export function SideBar() {
-    const [isExpanded, setIsExpanded] = useState(true);
-
+export function SideBar({ isExpanded, setIsExpanded, isTokyo, toggleTimezone }) {
     const [activeId, setActiveId] = useState('about');
 
     return (
@@ -45,12 +43,17 @@ export function SideBar() {
             </ul>
 
             <div className="sidebar-footer">
-                <div className="sidebar-item">
-                    <HiOutlineTranslate size={24} />
+                <div 
+                    className={`sidebar-item ${isTokyo ? 'active' : ''}`}
+                    onClick={toggleTimezone}
+                >
+                    <HiOutlineTranslate size={24} className="sidebar-icon"/>
                     {isExpanded && <span className="sidebar-label">日本語</span>}
                 </div>
             </div>
         </nav>
     );
 }
+
+
 
