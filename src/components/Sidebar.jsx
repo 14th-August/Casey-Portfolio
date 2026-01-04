@@ -24,7 +24,7 @@ export function SideBar() {
             <div className="sidebar-header">
                 {isExpanded && <h2 className="user-name">Casey Adams</h2>}
                 <button
-                    className="toggle-btn"
+                    className={`toggle-btn ${isExpanded ? 'is-active' : ''}`}
                     onClick={() => setIsExpanded(!isExpanded)}
                 >
                     {isExpanded ? <FaChevronLeft /> : <FaChevronRight />}
@@ -47,7 +47,7 @@ export function SideBar() {
             <div className="sidebar-footer">
                 <div className="sidebar-item">
                     <HiOutlineTranslate size={24} />
-                    {isExpanded && <span className="sidebar-label"></span>}
+                    {isExpanded && <span className="sidebar-label">日本語</span>}
                 </div>
             </div>
         </nav>

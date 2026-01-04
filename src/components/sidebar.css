@@ -1,14 +1,13 @@
 :root {
-  /* This is a soft cherry blossom pink */
-  --blossom-pink: #ffb7c5; 
+    --tech-blue: #a0d8ef;
+    --tech-blue-glow: rgba(160, 216, 239, 0.4);
 }
 
 .sidebar {
     height: 100%;
-    /* Layering a darker gradient at the bottom for a "vignette" effect */
     background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), 
-        url('../assets/cherry-blossom-2.jpg'); 
+    linear-gradient(rgba(10, 15, 25, 0.95), rgba(5, 5, 10, 0.95)), 
+       url('../assets/cherry-blossom-2.jpg'); 
     
     background-size: cover;
     background-position: center;
@@ -38,11 +37,11 @@
 
 .user-name {
     margin: 0;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     white-space: nowrap;
-    color: var(--blossom-pink);
-    font-weight: 300;
-    letter-spacing: 1px;
+    color: var(--tech-blue);
+    font-weight: 400;
+    letter-spacing: 2px;
     font-family: 'Murecho', sans-serif;
 }
 
@@ -58,10 +57,17 @@
     transition: all 0.2s ease;
 }
 
-.toggle-btn:hover {
+.toggle-btn:hover,
+.toggle-btn.is-active {
     background: rgba(255, 255, 255, 0.2);
-    color: #ffffff;
+    color: #ffffff !important;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    /* Keeps the button looking "pressed" or "on" */
+}
+
+.toggle-btn:active {
+    transform: scale(0.92);
+    transition: transform 0.1s ease;
 }
 
 /* List adjustments */
@@ -83,7 +89,7 @@
 
 .sidebar-item:hover {
     background-color: rgba(255, 255, 255, 0.15); /* White theme */
-    backdrop-filter: blur(8px); /* The "Frosted Glass" effect */
+    backdrop-filter: blur(8px); 
     -webkit-backdrop-filter: blur(8px); /* Safari support */
 }
 
@@ -113,15 +119,15 @@
 
 .sidebar-item.active {
     background-color: rgba(255, 255, 255, 0.1); 
-    border-left: 4px solid var(--blossom-pink);
+    border-left: 4px solid var(--tech-blue);
 }
 
 .sidebar-item.active .sidebar-icon {
-    color: var(--blossom-pink);
-    filter: drop-shadow(0 0 10px var(--blossom-pink)); /* Permanent glow */
+    color: var(--tech-blue);
+    filter: drop-shadow(0 0 10px var(--tech-blue)); /* Permanent glow */
 }
 
 .sidebar-item.active .sidebar-label {
-    color: var(--blossom-pink);
+    color: var(--tech-blue);
     font-weight: 500; 
 }
