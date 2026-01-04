@@ -1,0 +1,29 @@
+.portfolio-clock {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.clock-label {
+    font-family: 'Murecho', sans-serif; /* Clean tech font */
+    color: var(--blossom-pink); /* Your signature pink */
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-shadow: 0 0 10px var(--blossom-glow);
+    opacity: 0.9;
+}
+
+.clock-time {
+    font-family: 'M PLUS 1 Code', monospace; /* Monospaced keeps numbers from jumping */
+    color: #000000;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    /* Soft white glow to match your sidebar hovers */
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.4); 
+}
