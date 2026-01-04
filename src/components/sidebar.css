@@ -1,13 +1,13 @@
 :root {
-    --tech-blue: #a0d8ef;
-    --tech-blue-glow: rgba(160, 216, 239, 0.4);
+    --blossom-pink: #ffb7c5;
+    --blossom-glow: rgba(255, 183, 197, 0.4);
 }
 
 .sidebar {
     height: 100%;
     background-image: 
-    linear-gradient(rgba(10, 15, 25, 0.95), rgba(5, 5, 10, 0.95)), 
-       url('../assets/cherry-blossom-2.jpg'); 
+    linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.98)), 
+       url('../assets/floral-art.jpg'); 
     
     background-size: cover;
     background-position: center;
@@ -39,7 +39,8 @@
     margin: 0;
     font-size: 1.5rem;
     white-space: nowrap;
-    color: var(--tech-blue);
+    color: var(--blossom-pink);
+    text-shadow: 0 0 10px var(--blossom-glow);
     font-weight: 400;
     letter-spacing: 2px;
     font-family: 'Murecho', sans-serif;
@@ -114,20 +115,17 @@
 .sidebar-item:hover .sidebar-icon,
 .sidebar-item:hover .sidebar-label {
     color: #ffffff !important;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 
+                 0 0 15px var(--blossom-glow);
 }
 
 .sidebar-item.active {
-    background-color: rgba(255, 255, 255, 0.1); 
-    border-left: 4px solid var(--tech-blue);
+    background-color: rgba(255, 255, 255, 0.05); 
+    border-left: 4px solid var(--blossom-pink);
 }
 
-.sidebar-item.active .sidebar-icon {
-    color: var(--tech-blue);
-    filter: drop-shadow(0 0 10px var(--tech-blue)); /* Permanent glow */
-}
-
+.sidebar-item.active .sidebar-icon 
 .sidebar-item.active .sidebar-label {
-    color: var(--tech-blue);
-    font-weight: 500; 
+    color: var(--blossom-pink);
+    filter: drop-shadow(0 0 8px var(--blossom-pink)); /* Permanent glow */
 }
