@@ -6,7 +6,7 @@
 .sidebar {
     height: 100%;
     background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.98)), 
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.98)), 
        url('../assets/floral-art.jpg'); 
     
     background-size: cover;

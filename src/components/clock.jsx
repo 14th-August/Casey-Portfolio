@@ -9,30 +9,22 @@ dayjs.extend(timezone);
 
 export function Clock ({ isTokyo }) {
     const zone = isTokyo ? "Asia/Tokyo" : "America/Vancouver";
-    const label = isTokyo ? "JST" : "PST";
 
-    const [timeData, setTimeData] = useState({
-    date: dayjs().tz(zone).format('ddd MMM D'),
-    time: dayjs().tz(zone).format('hh:mm:ss A')
-    });
+    const getFormattedTime = () => dayjs().tz(zone).format('dddd, MMM D  h:mm A');
+
+    const [timeStr, setTimeStr] = useState(getFormattedTime());
 
     useEffect(() => {
-    const timer = setInterval(() => {
-      const now = dayjs().tz(zone);
-      setTimeData({
-        date: now.format('ddd MMM D'),
-        time: now.format('hh:mm:ss A')
-      });
-    }, 1000);
+        const timer = setInterval(() => {
+            setTimeStr(getFormattedTime());
+        }, 1000);
 
-    return () => clearInterval(timer);
-  }, [zone]);
+        return () => clearInterval(timer);
+    }, [zone]); // Effect re-runs immediately when timezone toggles
 
     return (
-    <div className="portfolio-clock">
-      <span className="clock-label">{label}</span>
-      <span className="clock-date">{timeData.date}</span>
-      <span className="clock-time">{timeData.time}</span>
-    </div>
+        <div className="apple-clock">
+            {timeStr}
+        </div>
     );
 }
