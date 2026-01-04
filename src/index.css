@@ -1,0 +1,12 @@
+body {
+  font-family: 'Cormorant Garamond', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Use the Japanese Mincho font for all headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}

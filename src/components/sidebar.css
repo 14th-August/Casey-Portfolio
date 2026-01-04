@@ -1,12 +1,23 @@
-.sidebar {
-    height: 100%;
-    background-color: rgb(245, 164, 164);
-    display: flex;
-    flex-direction: column;
-    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: hidden;
+:root {
+  /* This is a soft cherry blossom pink */
+  --blossom-pink: #ffb7c5; 
 }
 
+.sidebar {
+    height: 100%;
+    /* Layering a darker gradient at the bottom for a "vignette" effect */
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), 
+        url('../assets/cherry-blossom-2.jpg'); 
+    
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+    font-family: 'Murecho', sans-serif;
+}
 /* Width states */
 .sidebar.expanded {
     width: 300px;
@@ -27,13 +38,16 @@
 
 .user-name {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     white-space: nowrap;
-    color: #333;
+    color: var(--blossom-pink);
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-family: 'Murecho', sans-serif;
 }
 
 .toggle-btn {
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.05); /* Light white instead of dark */
     border: none;
     border-radius: 4px;
     padding: 5px 8px;
@@ -41,10 +55,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.2s ease;
 }
 
 .toggle-btn:hover {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 /* List adjustments */
@@ -65,16 +82,46 @@
 }
 
 .sidebar-item:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.15); /* White theme */
+    backdrop-filter: blur(8px); /* The "Frosted Glass" effect */
+    -webkit-backdrop-filter: blur(8px); /* Safari support */
 }
 
 .sidebar-icon {
     min-width: 24px;
     display: flex;
     justify-content: center;
+    transition: filter 0.3s ease;
 }
 
 .sidebar-label {
     margin-left: 15px;
-    font-family: sans-serif;
+}
+
+.user-name, 
+.sidebar-label, 
+.sidebar-icon,
+.toggle-btn {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.sidebar-item:hover .sidebar-icon,
+.sidebar-item:hover .sidebar-label {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-item.active {
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-left: 4px solid var(--blossom-pink);
+}
+
+.sidebar-item.active .sidebar-icon {
+    color: var(--blossom-pink);
+    filter: drop-shadow(0 0 10px var(--blossom-pink)); /* Permanent glow */
+}
+
+.sidebar-item.active .sidebar-label {
+    color: var(--blossom-pink);
+    font-weight: 500; 
 }

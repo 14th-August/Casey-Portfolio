@@ -17,6 +17,8 @@ const navLinks = [
 export function SideBar() {
     const [isExpanded, setIsExpanded] = useState(true);
 
+    const [activeId, setActiveId] = useState('about');
+
     return (
         <nav className={`sidebar ${isExpanded ? "expanded" : "collapsed"}`}>
             <div className="sidebar-header">
@@ -31,7 +33,11 @@ export function SideBar() {
 
             <ul className="sidebar-list">
                 {navLinks.map((link) => (
-                    <li key={link.id} className="sidebar-item">
+                    <li 
+                        key={link.id} 
+                        className={`sidebar-item ${activeId === link.id ? 'active' : ''}`}
+                        onClick={() => setActiveId(link.id)}
+                    >
                         <span className="sidebar-icon">{link.icon}</span>
                         {isExpanded && <span className="sidebar-label">{link.label}</span>}
                     </li>
@@ -41,9 +47,9 @@ export function SideBar() {
             <div className="sidebar-footer">
                 <div className="sidebar-item">
                     <HiOutlineTranslate size={24} />
+                    {isExpanded && <span className="sidebar-label"></span>}
                 </div>
             </div>
-
         </nav>
     );
 }
