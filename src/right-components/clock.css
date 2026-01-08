@@ -1,0 +1,13 @@
+.apple-clock {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-family: 'Murecho', sans-serif;
+    color: #a1a1a1; 
+    font-weight: 400;
+    font-size: 0.85rem;
+    letter-spacing: -0.01em; 
+    font-variant-numeric: tabular-nums;
+    transition: all 0.3s ease;
+    cursor: default;
+}

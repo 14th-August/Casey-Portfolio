@@ -1,0 +1,107 @@
+/* 1. GLOBAL RESET & LAYOUT 
+   This forces the page to stay within the viewport bounds (No Scroll) */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 45%, #e2e8f0 100%);
+  color: #000000; 
+  font-family: 'Inter', sans-serif; /* Recommended for this look */
+  overflow: hidden; /* Temporarily disables scrolling for editing */
+  height: 100%; /*keep page at this height */
+}
+
+/* Container to center the content on large screens */
+.app-container {
+  display: flex;
+  justify-content: left;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Two-column grid setup */
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 45% 55%; 
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 48px; /* Reduced padding to help everything fit */
+  height: 100vh;
+}
+
+/* 2. SIDEBAR LAYOUT */
+.sidebar {
+  position: sticky; /* Keeps component locked */
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 96px 0; /* Vertical spacing */
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* Typography Improvements */
+.user-name {
+  font-size: 48px;
+  font-weight: 700;
+  color: #000000cc; /* Bright Slate */
+  margin: 0;
+  letter-spacing: -0.030em;
+}
+
+/*2nd line underneath my name */
+.user-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000bb;
+  margin-top: 12px;
+}
+
+/* 3rd Line underneath my name */
+.user-description {
+  margin-top: 16px;
+  line-height: 1.6;
+  color: #000000b2; 
+  font-size: 16px;
+  max-width: 300px; /* Prevents text from stretching too wide */
+}
+
+.image {
+    width: 300px;    
+    height: 300px;
+    mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 200px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.social-icons a, 
+.icon-button {
+  color: #475569; 
+  transition: color 0.2s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.social-icons a:hover, 
+.icon-button:hover {
+    color: #000000;
+}
+
+/* Ensure the icons don't shrink on small height screens */
+.social-icons svg {
+  fill: currentColor;   /* Forces the SVG to use the 'color' value */
+  stroke: currentColor; /* Use this if your icons are outline-style */
+  flex-shrink: 0;
+}

@@ -1,0 +1,55 @@
+/*all of the stuff like anbout experience projects */
+/*this section is for the side bar spacing so how far from the title at the top*/
+.sidebar-nav {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/*each individual line so like the about, experience etc*/
+.nav-item {
+  display: flex;
+  align-items: center; /* Vertically aligns line with text */
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: max-content;
+}
+
+/*the line behind the text, to see how far apart each
+of the clicks are and much margin etc*/
+.nav-line {
+  width: 32px;
+  height: 1px;
+  background-color: #000000a2;
+  margin-right: 16px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/*not label dimensions
+just font stuff*/
+.nav-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #000000c0;
+  transition: color 0.3s ease;
+}
+
+/* Hover & Active States */
+.nav-item:hover .nav-label,
+.nav-item.active .nav-label {
+  color: #e2e8f011;
+}
+
+.nav-item:hover .nav-line,
+.nav-item.active .nav-line {
+  width: 64px; /* The line grows on hover/scroll */
+  background-color: #000000;
+}
+
+/* Footer / Socials */
+.sidebar-footer {
+  margin-top: auto; /* margin space above */
+  padding-bottom: 20px; /* Ensures icons aren't touching the very bottom edge */
+}

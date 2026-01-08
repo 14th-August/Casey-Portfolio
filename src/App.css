@@ -1,19 +1,53 @@
-.App {
-  width: 100vw;
-  height: 100vh;
+.app-container {
+  /* Combined your 135deg gradient with the centered layout */
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 45%, #e2e8f0 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* Centers the content-wrapper */
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Cormorant Garamond', serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 45% 55%; 
+  max-width: 1280px; 
+  width: 100%;
+  padding: 0 96px; 
+  gap: 48px;
 }
 
-/* Use the Japanese Mincho font for all headings */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Shippori Mincho', serif;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+/* Updated Sidebar for Sticky Behavior */
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh; /* Keeps it the full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 96px 0; /* Matches the main content's top padding */
+}
+
+.main-content {
+  padding: 96px 0;
+  /* Ensure the clock stays at the top of the content column */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive: Stack for Tablets/Phones */
+@media (max-width: 1024px) {
+  .content-wrapper {
+    grid-template-columns: 1fr; /* Stacks the grid */
+    padding: 0 40px;
+    gap: 0;
+  }
+
+  .sidebar {
+    position: relative;
+    height: auto;
+    padding: 48px 0 0 0;
+  }
+
+  .main-content {
+    padding: 48px 0;
+  }
 }
