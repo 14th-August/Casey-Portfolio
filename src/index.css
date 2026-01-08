@@ -2,7 +2,7 @@
   /* Use a lighter weight (300) for a "blueprint" look */
   --tech-font: 'M PLUS 1 Code', sans-serif;
   --accent-mono: 'Space Mono', monospace;
-  --bg: #121212; /* Dark mode looks very technical */
+  --bg: #ffffff; /* Dark mode looks very technical */
   --text: #e0e0e0;
 }
 

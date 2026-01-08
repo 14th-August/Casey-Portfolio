@@ -4,6 +4,7 @@ import { Clock } from './components/clock';
 import './App.css'
 
 function App() {
+  <title>Welcome to My Website!</title>
   const [isTokyo, setIsTokyo] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
 
