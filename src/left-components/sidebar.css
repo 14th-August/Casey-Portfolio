@@ -73,11 +73,13 @@ html, body {
     mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0) 100%);
     -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0) 100%);
     border-radius: 200px;
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
 }
 
 .social-icons {
   display: flex;
   align-items: center;
+  padding-top: 20px;
   gap: 24px;
 }
 
@@ -89,7 +91,6 @@ html, body {
   border: none;
   cursor: pointer;
   padding: 0;
-  padding-top: 40px;
   display: flex;
   align-items: center;
 }

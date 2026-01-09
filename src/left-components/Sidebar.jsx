@@ -16,16 +16,16 @@ export function SideBar({ toggleTimezone }) {
                 </p>
             </div>
 
-            <img src="src/assets/selfie.jpg" className="image"/>
+            <img src="src/assets/selfie.jpg" className="image" />
 
             <div className="sidebar-footer">
                 <div className="social-icons">
                     <a href="https://github.com" target="_blank" rel="noreferrer"><FaGithub size={24} /></a>
                     <a href="https://instagram.com" target="_blank" rel="noreferrer"><FaInstagram size={24} /></a>
                     <a href="https://linkedin.com" target="_blank" rel="noreferrer"><FaLinkedin size={24} /></a>
-                    <a href="mailto:your@email.com"><FaEnvelope size={24} /></a>
+                    <a href="mailto:CFAdams10@gmail.com"><FaEnvelope size={24} /></a>
                     
-                    <button className="icon-button" onClick={toggleTimezone} title="Toggle Language">
+                    <button className="icon-button" onClick={toggleTimezone} title="日本語">
                         <HiOutlineTranslate size={24} />
                     </button>
                 </div>
