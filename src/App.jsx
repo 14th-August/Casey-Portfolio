@@ -32,9 +32,11 @@ function App() {
               <section id="projects" className="content-section">
               </section>
             </div>
+
             <div>
               <Navbar />
             </div>
+            
         </main>
     </div>
   );

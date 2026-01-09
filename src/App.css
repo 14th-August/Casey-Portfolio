@@ -1,5 +1,4 @@
 .app-container {
-  /* Combined your 135deg gradient with the centered layout */
   background: linear-gradient(135deg, #ffffff 0%, #f8fafc 45%, #e2e8f0 100%);
   min-height: 100vh;
   display: flex;
@@ -33,7 +32,6 @@
   flex-direction: column;
 }
 
-/* Responsive: Stack for Tablets/Phones */
 @media (max-width: 1024px) {
   .content-wrapper {
     grid-template-columns: 1fr; /* Stacks the grid */
