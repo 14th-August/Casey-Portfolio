@@ -2,44 +2,46 @@ import { useState } from 'react';
 import { SideBar } from './left-components/Sidebar';
 import { Clock } from './right-components/clock';
 import { About } from './right-components/About';
-import './App.css'
 import { Navbar } from './right-components/navbar';
+import { ProjectsGallery } from './right-components/Project';
+import './App.css';
 
 function App() {
-  <title>Welcome to My Website!</title>
   const [isTokyo, setIsTokyo] = useState(false);
+  const [activeTab, setActiveTab] = useState('about');
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case 'about':
+        return <About />;
+      case 'projects':
+        return <ProjectsGallery />;
+      case 'resume':
+        return <Resume />;
+      default:
+        return <About />;
+    }
+  };
 
   return (
     <div className="app-container">
-        <SideBar 
-          isTokyo={isTokyo}
-          toggleTimezone={() => setIsTokyo(!isTokyo)}
-      />
+      <SideBar isTokyo={isTokyo} toggleTimezone={() => setIsTokyo(!isTokyo)} />
 
       <main className="main-content">
-            <header className="top-bar">
-                <Clock isTokyo={isTokyo} />
-            </header>
-            
-            <div className="content" >
-              <section id="about" className="content-section">
-                  <About />
-              </section>
+        <header className="top-bar">
+          <Clock isTokyo={isTokyo} />
+        </header>
+        
+        <div className="content">
+          <section className="content-section">
+            {renderContent()}
+          </section>
+        </div>
 
-              <section id="experience" className="content-section">
-              </section>
-
-              <section id="projects" className="content-section">
-              </section>
-            </div>
-
-            <div>
-              <Navbar />
-            </div>
-            
-        </main>
+        <Navbar activeId={activeTab} setActiveId={setActiveTab} />
+      </main>
     </div>
   );
 }
 
-export default App
+export default App;

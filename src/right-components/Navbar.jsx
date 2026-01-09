@@ -1,4 +1,3 @@
-import { useState } from "react";
 import './navbar.css';
 
 const navLinks = [
@@ -7,10 +6,7 @@ const navLinks = [
     { id: 'resume', label: 'Resume' },
 ];
 
-export function Navbar() {
-
-    const [activeId, setActiveId] = useState('about');
-
+export function Navbar({ activeId, setActiveId }) {
     return (
         <nav className="sidebar-nav">
             {navLinks.map((link) => (
@@ -18,7 +14,10 @@ export function Navbar() {
                     key={link.id}
                     href={`#${link.id}`}
                     className={activeId === link.id ? 'active' : ''}
-                    onClick={() => setActiveId(link.id)}
+                    onClick={(e) => {
+                        e.preventDefault(); 
+                        setActiveId(link.id);
+                    }}
                 >
                     {link.label}
                     </a>
@@ -26,4 +25,6 @@ export function Navbar() {
         </nav>
     );
 }
+
+
 
