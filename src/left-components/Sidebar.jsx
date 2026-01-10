@@ -17,7 +17,7 @@ export function SideBar({ toggleTimezone }) {
                 </p>
             </div>
 
-            <img src="src/assets/selfie3.png" className="image" />
+            <img src="src/assets/seflie5.jpg" className="image" />
 
             <div className="sidebar-footer">
                 <div className="social-icons">

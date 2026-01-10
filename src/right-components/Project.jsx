@@ -20,7 +20,7 @@ const projects = [
     year: '2026',
     name: "This Website", 
     tech: ["React", "HTML", "CSS", "Vite"], 
-    desc: "First itteration of my website and incorporated using React and Vite. Will be updating overtime.", 
+    desc: "First iteration of my website and incorporated using React and Vite. Will be updating overtime.", 
     link: "#" 
   },
   { 
