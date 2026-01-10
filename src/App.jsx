@@ -25,21 +25,25 @@ function App() {
 
   return (
     <div className="app-container">
-      <SideBar isTokyo={isTokyo} toggleTimezone={() => setIsTokyo(!isTokyo)} />
+      <div className="content-wrapper">
+        <SideBar isTokyo={isTokyo} toggleTimezone={() => setIsTokyo(!isTokyo)} />
 
-      <main className="main-content">
-        <header className="top-bar">
-          <Clock isTokyo={isTokyo} />
-        </header>
-        
-        <div className="content">
-          <section className="content-section">
-            {renderContent()}
-          </section>
-        </div>
+        <main className="main-content">
+          <header className="top-bar">
+            <Clock isTokyo={isTokyo} />
+          </header>
 
-        <Navbar activeId={activeTab} setActiveId={setActiveTab} />
-      </main>
+          <div className="content">
+            <section className="content-section">
+              {renderContent()}
+            </section>
+          </div>
+
+          <div className="navbar-container">
+            <Navbar activeId={activeTab} setActiveId={setActiveTab} />
+          </div>
+        </main>
+      </div>
     </div>
   );
 }

@@ -1,51 +1,78 @@
+html {
+  overflow-y: scroll; 
+}
+
 .app-container {
   background: linear-gradient(135deg, #ffffff 0%, #f8fafc 45%, #e2e8f0 100%);
   min-height: 100vh;
   display: flex;
-  justify-content: center; /* Centers the content-wrapper */
+  justify-content: center; /* This keeps your site centered on all monitors */
+  padding: 0 48px;
 }
 
 .content-wrapper {
   display: grid;
-  grid-template-columns: 45% 55%; 
-  max-width: 1280px; 
+  /* Fixed sidebar column (350px) and flexible content column (1fr) */
+  grid-template-columns: 350px 1fr; 
+  max-width: 1200px; /* Constrains the site width for a professional look */
   width: 100%;
-  padding: 0 96px; 
-  gap: 48px;
+  padding: 0 60px; 
+  gap: 80px; /* Controls the distance between your photo and the text */
+  align-items: start;
 }
 
-/* Updated Sidebar for Sticky Behavior */
 .sidebar {
+  grid-column: 1;
   position: sticky;
   top: 0;
-  height: 100vh; /* Keeps it the full height of the viewport */
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 96px 0; /* Matches the main content's top padding */
+  padding: 96px 0;
 }
 
+/* 5. Main Content: Locked to Column 2 */
 .main-content {
+  grid-column: 2;
   padding: 96px 0;
-  /* Ensure the clock stays at the top of the content column */
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
+
+/* 6. Clean reset for inner sections */
+.content-section, 
+.about-section, 
+.projects-wrapper {
+  margin-left: 0 !important; 
+  width: 100%;
+}
+
+/* 7. Responsive Fixes */
 @media (max-width: 1024px) {
   .content-wrapper {
-    grid-template-columns: 1fr; /* Stacks the grid */
+    grid-template-columns: 1fr; /* Stacks sidebar over content */
     padding: 0 40px;
-    gap: 0;
+    gap: 40px;
   }
 
   .sidebar {
     position: relative;
     height: auto;
     padding: 48px 0 0 0;
+    text-align: center;
   }
 
   .main-content {
-    padding: 48px 0;
+    padding: 24px 0 48px 0;
   }
+}
+
+.navbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transform: translateX(-200px);
 }
