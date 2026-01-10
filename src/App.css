@@ -6,14 +6,13 @@ html {
   background: linear-gradient(135deg, #ffffff 0%, #f8fafc 45%, #e2e8f0 100%);
   min-height: 100vh;
   display: flex;
-  justify-content: center; /* This keeps your site centered on all monitors */
+  justify-content: center; 
   padding: 0 48px;
 }
 
 .content-wrapper {
   display: grid;
-  /* Fixed sidebar column (350px) and flexible content column (1fr) */
-  grid-template-columns: 350px 1fr; 
+  grid-template-columns: 425px 1fr; 
   max-width: 1200px; /* Constrains the site width for a professional look */
   width: 100%;
   padding: 0 60px; 
@@ -32,7 +31,6 @@ html {
   padding: 96px 0;
 }
 
-/* 5. Main Content: Locked to Column 2 */
 .main-content {
   grid-column: 2;
   padding: 96px 0;
@@ -42,7 +40,6 @@ html {
 }
 
 
-/* 6. Clean reset for inner sections */
 .content-section, 
 .about-section, 
 .projects-wrapper {
@@ -50,7 +47,6 @@ html {
   width: 100%;
 }
 
-/* 7. Responsive Fixes */
 @media (max-width: 1024px) {
   .content-wrapper {
     grid-template-columns: 1fr; /* Stacks sidebar over content */
@@ -71,8 +67,18 @@ html {
 }
 
 .navbar-container {
-  width: 100%;
+  position: fixed;      /* FIXED: Stays in one spot regardless of scroll or content */
+  bottom: 80px;         /* Locked 40px from the bottom of the screen */
+  
+  /* We need to manually align it to your right-hand column */
+  /* Since your sidebar is 425px + 80px gap, we start after that */
+  left: calc(50% + 150px); 
+  transform: translateX(-25%);
+  
+  width: auto;
   display: flex;
   justify-content: center;
-  transform: translateX(-200px);
+  z-index: 9999;        /* High priority: stays on top of all text */
+
 }
+
