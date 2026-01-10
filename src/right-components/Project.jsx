@@ -1,4 +1,4 @@
-import './project.css'
+import './project.css';
 
 const projects = [
     { id: '1', name: "This Website", tech: ["React", "HTML", "CSS"], desc: "The very website you're viewing right now!", link: "#" },
