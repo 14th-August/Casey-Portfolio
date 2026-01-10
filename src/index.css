@@ -1,22 +1,36 @@
+/* 1. Import Noto Sans JP at the very top */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
 :root {
-  /* Use a lighter weight (300) for a "blueprint" look */
-  --tech-font: 'M PLUS 1 Code', sans-serif;
-  --accent-mono: 'Space Mono', monospace;
-  --bg: #ffffff; /* Dark mode looks very technical */
-  --text: #e0e0e0;
+  /* Use Noto Sans JP as your main technical font */
+  --tech-font: 'Noto Sans JP', sans-serif;
+  
+  /* Background and Text colors */
+  --bg: #ffffff; 
+  --text: #1a1a1a; /* Changed to dark for your white background theme */
 }
 
 body {
+  margin: 0;
   font-family: var(--tech-font);
   background-color: var(--bg);
   color: var(--text);
-  letter-spacing: 0.02em; /* Modern technical spacing */
+  letter-spacing: 0.02em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* For labels, dates, or small tags */
-.label {
+/* Ensure headings inherit the Japanese font for a consistent look */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--tech-font);
+  font-weight: 700;
+}
+
+/* For labels, dates, or small tags - keeping your Mono accent */
+.label, .title-date {
   font-family: var(--accent-mono);
   font-size: 0.75rem;
   text-transform: uppercase;
-  color: #00ff41; /* Optional: "Terminal" green accent */
+  color: #666666; /* Subtle grey for the light theme */
 }

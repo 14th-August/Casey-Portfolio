@@ -2,10 +2,10 @@
 .projects-wrapper {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(145deg, #f4f4f5 0%, #e4e4e7 50%, #d4d4d8 100%);
   padding: 1.5rem;
-  border-radius: 12px;
+  /*background: linear-gradient(135deg, #ffffff 0%, #f8fafc 45%, #e2e8f0 100%);
   border: 1px solid #cacaca; /* Silver-grey border */
+  border-radius: 12px;
   max-width: 600px; 
   margin: 0 auto 70px 10%; 
   box-sizing: border-box;
@@ -13,13 +13,14 @@
 }
 
 .Project-title {
-  color: #18181b; /* Zinc Black */
-  font-size: 1.25rem;
+  color: #18181b; 
   margin-bottom: 1.5rem;
-  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  font-weight: bold;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
 }
 
 /* 2. Scrollable Grid Area */
@@ -58,9 +59,8 @@
   transform: translateX(2px);
 }
 
-/* 4. Text Elements */
 .project-content h3 {
-  color: #09090b; /* Deep Zinc */
+  color: #09090b; 
   margin: 0 0 6px 0;
   font-size: 1rem;
   font-weight: 700;
@@ -68,7 +68,7 @@
 
 .title-date {
   font-size: 0.75rem;
-  color: #71717a; /* Muted Zinc */
+  color: #71717a; 
   font-weight: 500;
   margin-left: 6px;
 }
@@ -76,11 +76,10 @@
 .project-content p {
   font-size: 0.85rem;
   line-height: 1.5;
-  color: #3f3f46; /* Mid Zinc */
+  color: #3f3f46; 
   margin-bottom: 12px;
 }
 
-/* 5. Icon Row (Black/Grey) */
 .icon-container {
   display: flex;
   flex-wrap: wrap;
@@ -96,7 +95,7 @@
 
 .project-card:hover .tech-icon {
   color: #000000;
-  transform: scale(1.1); /* Tiny pop on icons */
+  transform: scale(1.1); 
 }
 
 /* 6. Responsive */

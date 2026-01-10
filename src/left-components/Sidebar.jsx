@@ -9,6 +9,7 @@ export function SideBar({ toggleTimezone }) {
         <header className="sidebar">
             <div className="sidebar-top">
                 <h1 className="user-name">Casey Adams</h1>
+                <div className="line-element"></div>
                 <h2 className="user-title">Software Engineer</h2>
                 <p className="user-description">
                 I create scalable, creative, and modular 

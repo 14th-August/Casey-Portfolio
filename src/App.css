@@ -68,17 +68,13 @@ html {
 
 .navbar-container {
   position: fixed;      /* FIXED: Stays in one spot regardless of scroll or content */
-  bottom: 80px;         /* Locked 40px from the bottom of the screen */
-  
-  /* We need to manually align it to your right-hand column */
-  /* Since your sidebar is 425px + 80px gap, we start after that */
+  bottom: 57px;         
   left: calc(50% + 150px); 
   transform: translateX(-25%);
-  
   width: auto;
   display: flex;
   justify-content: center;
-  z-index: 9999;        /* High priority: stays on top of all text */
+  z-index: 9999;       
 
 }
 

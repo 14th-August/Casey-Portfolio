@@ -1,13 +1,10 @@
-/* 1. GLOBAL RESET & LAYOUT 
-   This forces the page to stay within the viewport bounds (No Scroll) */
 html, body {
   margin: 0;
   padding: 0;
   background: linear-gradient(135deg, #ffffff 0%, #f8fafc 45%, #e2e8f0 100%);
-  color: #000000; 
-  font-family: 'Inter', sans-serif; /* Recommended for this look */
+  color: #000000;  /* Recommended for this look */
   overflow: hidden; /* Temporarily disables scrolling for editing */
-  height: 100%; /*keep page at this height */
+  height: 100%; 
 }
 
 /* Container to center the content on large screens */
@@ -53,18 +50,19 @@ html, body {
 /*2nd line underneath my name */
 .user-title {
   font-size: 20px;
-  font-weight: 500;
-  color: #000000bb;
+  font-weight: 300;
+  color: #000000;
   margin-top: 12px;
 }
 
 /* 3rd Line underneath my name */
 .user-description {
-  margin-top: 16px;
-  line-height: 1.6;
-  color: #000000b2; 
-  font-size: 16px;
-  max-width: 300px; /* Prevents text from stretching too wide */
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+  margin-top: 12px;
+  font-style: bold;
 }
 
 .image {
@@ -85,7 +83,7 @@ html, body {
 
 .social-icons a, 
 .icon-button {
-  color: #475569; 
+  color: #000000; 
   transition: color 0.2s ease;
   background: none;
   border: none;
@@ -97,12 +95,22 @@ html, body {
 
 .social-icons a:hover, 
 .icon-button:hover {
-    color: #000000;
+  color: #92969c;
+  transform: scale(1.05); 
 }
 
-/* Ensure the icons don't shrink on small height screens */
 .social-icons svg {
   fill: currentColor;   /* Forces the SVG to use the 'color' value */
   stroke: currentColor; /* Use this if your icons are outline-style */
   flex-shrink: 0;
+}
+
+.line-element {
+  width: 200px;             /* Short length like the reference image */
+  height: 1px;             /* Sleek thickness */
+  background-color: #1a1a1a; /* Dark charcoal/black to match your text */
+  margin-top: 8px;        /* Spacing below Casey Adams */
+  margin-bottom: 8px;     /* Spacing above Software Engineer */
+  border: none;
+  /* Optional: if you want it to look more "silver", use #71717a */
 }
