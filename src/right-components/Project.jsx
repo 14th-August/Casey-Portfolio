@@ -1,4 +1,4 @@
-import './project.css';
+import './Project.css';
 import { 
   SiReact, SiHtml5, SiCss3, SiTypescript, 
   SiNextdotjs, SiTailwindcss, SiPython, SiVite
@@ -14,6 +14,7 @@ const techIcons = {
   "Python": <SiPython title="Python"/>,
   "Vite": <SiVite title="Vite" />
 };
+
 const projects = [
   { 
     id: '1', 

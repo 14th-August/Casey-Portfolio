@@ -3,8 +3,7 @@ import './about.css';
 const content = {
     en: {
         p1: <>
-        I am a developer from <span className="highlight">Nanaimo, BC, Canada. </span>
-        I am currently enrolled at Vancouver Island University and my passion is developing applications for my community and colleagues. 
+        I am a developer from <span className="highlight">Nanaimo, BC, Canada.</span> I am currently enrolled at Vancouver Island University and my passion is developing applications for my community and colleagues. 
         My favourite hobbies are studying Japanese, cooking, working out, and bugging my friends.</>,
         p2: <>Building with the idea of <span className="highlight">scalability and practical design</span> are what drives me to improve my skills 
         as a developer. I push myself to grow my technical stack and remain adaptable and flexible.</>,
