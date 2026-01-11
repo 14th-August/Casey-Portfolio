@@ -6,31 +6,30 @@ import { Navbar } from './right-components/navbar';
 import { ProjectsGallery } from './right-components/Project';
 import './App.css';
 
-function App() {
-  const [isTokyo, setIsTokyo] = useState(false);
+export function App() {
   const [activeTab, setActiveTab] = useState('about');
+  const [language, setLanguage] = useState('en');
+
+    const toggleLanguage = () => {
+        setLanguage((prev) => (prev === 'en' ? 'ja' : 'en'));
+    };
 
   const renderContent = () => {
     switch (activeTab) {
-      case 'about':
-        return <About />;
-      case 'projects':
-        return <ProjectsGallery />;
-      case 'resume':
-        return <Resume />;
-      default:
-        return <About />;
+      case 'about': return <About language={language} />;
+      case 'projects': return <ProjectsGallery language={language} />;
+      default: return <About language={language} />;
     }
   };
 
   return (
     <div className="app-container">
       <div className="content-wrapper">
-        <SideBar isTokyo={isTokyo} toggleTimezone={() => setIsTokyo(!isTokyo)} />
+        <SideBar language={language} onToggleLanguage={toggleLanguage}/>
 
         <main className="main-content">
           <header className="top-bar">
-            <Clock isTokyo={isTokyo} />
+            <Clock language={language} />
           </header>
 
           <div className="content">

@@ -60,6 +60,7 @@ html, body {
   margin-top: 12px;
   font-size: 20px;
   font-weight: 700;
+  max-width: 350px;
   color: #000000;
   margin-top: 12px;
   font-style: bold;
@@ -71,8 +72,8 @@ html, body {
     filter: blur(0.2px);
     transform: scale(1.01); /* prevents edge clipping */
     transition: filter 0.4s ease;
-    mask-image: radial-gradient(circle, black 60%, rgba(0, 0, 0, 0) 95%);
-    -webkit-mask-image: radial-gradient(circle, black 60%, rgba(0, 0, 0, 0) 95%);
+    mask-image: radial-gradient(circle, black 63%, rgba(0, 0, 0, 0) 95%);
+    -webkit-mask-image: radial-gradient(circle, black 63%, rgba(0, 0, 0, 0) 95%);
     border-radius: 200px;
 }
 

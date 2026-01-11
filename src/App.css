@@ -68,7 +68,7 @@ html {
 
 .navbar-container {
   position: fixed;      /* FIXED: Stays in one spot regardless of scroll or content */
-  bottom: 57px;         
+  bottom: 42px;         
   left: calc(50% + 150px); 
   transform: translateX(-25%);
   width: auto;
