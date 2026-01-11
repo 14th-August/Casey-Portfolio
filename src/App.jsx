@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { SideBar } from './left-components/Sidebar';
-import { Clock } from './right-components/clock';
+import { Clock } from './left-components/Language';
 import { About } from './right-components/About';
 import { Navbar } from './right-components/navbar';
 import { ProjectsGallery } from './right-components/Project';
@@ -39,7 +39,7 @@ export function App() {
           </div>
 
           <div className="navbar-container">
-            <Navbar activeId={activeTab} setActiveId={setActiveTab} />
+            <Navbar activeId={activeTab} setActiveId={setActiveTab} language={language} />
           </div>
         </main>
       </div>

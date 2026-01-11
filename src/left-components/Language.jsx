@@ -3,7 +3,7 @@ import utc from "dayjs/plugin/utc";
 import dayjs from "dayjs";
 import timezone from 'dayjs/plugin/timezone';
 import 'dayjs/locale/ja';
-import './clock.css';
+import './language.css';
 
 dayjs.extend(utc);
 dayjs.extend(timezone);

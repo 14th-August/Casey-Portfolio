@@ -1,12 +1,12 @@
 import './navbar.css';
 
 const navLinks = [
-    { id: 'about', label: 'About' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'resume', label: 'Resume' },
+    { id: 'about', label: 'About', ja:'紹介' },
+    { id: 'projects', label: 'Projects',ja: 'プロジェクト' },
+    { id: 'resume', label: 'Resume', ja: '履歴書' },
 ];
 
-export function Navbar({ activeId, setActiveId }) {
+export function Navbar({ activeId, setActiveId, language }) {
     return (
         <nav className="sidebar-nav">
             {navLinks.map((link) => (
@@ -14,12 +14,11 @@ export function Navbar({ activeId, setActiveId }) {
                     key={link.id}
                     href={`#${link.id}`}
                     className={activeId === link.id ? 'active' : ''}
-                    onClick={(e) => {
-                        e.preventDefault(); 
+                    onClick={() => {
                         setActiveId(link.id);
                     }}
                 >
-                    {link.label}
+                    {language === 'ja' ? link.ja : link.label}
                     </a>
             ))}
         </nav>

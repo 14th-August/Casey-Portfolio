@@ -68,13 +68,12 @@ html {
 
 .navbar-container {
   position: fixed;      /* FIXED: Stays in one spot regardless of scroll or content */
-  bottom: 42px;         
+  bottom: 39px;         
   left: calc(50% + 150px); 
   transform: translateX(-25%);
   width: auto;
   display: flex;
   justify-content: center;
   z-index: 9999;       
-
 }
 
