@@ -16,7 +16,7 @@ html {
   max-width: 1200px; /* Constrains the site width for a professional look */
   width: 100%;
   padding: 0 60px; 
-  gap: 80px; /* Controls the distance between your photo and the text */
+  gap: 80px; /* Controls the distance between your photo and text */
   align-items: start;
 }
 
