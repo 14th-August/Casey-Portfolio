@@ -26,7 +26,7 @@ export function Clock ({ language }) {
         }, 1000);
 
         return () => clearInterval(timer);
-    }, [language, zone]); // Effect re-runs immediately when timezone toggles
+    }, [language]); //Unknown if I need to keep these here, dont know how to remove the tag
 
     return (
         <div className="apple-clock">
