@@ -12,9 +12,10 @@ const content = {
         consider sending me an email by clicking the mail icon.</>
     },
     ja: {
-        p1: <>私は<span className="highlight">カナダのナナイモ</span>出身のデベロッパーです。現在、<span className="highlight">バンクーバーアイランド大学</span>に在学しており...</>,
-        p2: <><span className="highlight">拡張性と実用的なデザイン</span>という考えを大切に、開発者としてのスキルを磨いています...</>,
-        p3: <>現在、<span className="highlight">お仕事を探しており</span>、個人プロジェクトや研究を通じて着実にスキルを向上させています...</>
+        p1: <><span className="highlight">カナダのブリティッシュコロンビア州にあるナナイモ</span>出身のディべロッパーです。私は現在バンクーバーアイランド大学に在籍しています。コミュニティや同僚や会社のためにアプリを作ります。
+        私の趣味は日本語の勉強、料理、運動、そして友達と出かけることです。</>,
+        p2: <>実用的なデザインでアイディアを作ります。　技術の向上のためにテックスタックを磨き、変化に柔軟に対応することを心がけています。</>,
+        p3: <>現在、<span className="highlight">お仕事を探しており</span>、もしプロジェクトをご覧になりたい場合GitHubを確認してください。連絡を希望される方は、メールアイコンを確認してください</>
     }
 };
 

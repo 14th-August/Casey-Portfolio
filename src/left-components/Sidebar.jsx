@@ -11,7 +11,7 @@ const translations = {
     },
     ja: {
         title: "ソフトウェアエンジニア",
-        description: "小生、拡張性・創造性・モジュール性を備えたアプリを開発。",
+        description: "私はスケーラブル、クリエイティブ、モジュールなアプリを作ります",
         buttonHint: "英語に切り替え",
         name: "ケーシー・アダムス",
     }

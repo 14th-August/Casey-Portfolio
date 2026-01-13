@@ -23,7 +23,7 @@ const projects = [
         "jp-name": "本サイト",
         tech: ["React", "HTML", "CSS", "Vite"],
         desc: "First iteration of my website and incorporated using React and Vite. Will be updating overtime.",
-        "jp-desc": "ReactとViteを用いた本サイトの初版です。随時更新を予定しております。",
+        "jp-desc": "私はスケーラブル、クリエイティブ、モジュールなアプリを作ります",
         link: "#"
     },
     {
