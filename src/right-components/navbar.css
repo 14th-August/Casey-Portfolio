@@ -1,10 +1,9 @@
 .sidebar-nav {
-  /* Use flexbox to handle alignment mathematically */
   display: flex; 
   width: 100%; 
   justify-content: center; /* Centers the links in the main-content column */
   align-items: center;
-  padding: 0 0 40px 0; 
+  padding-bottom: 60px;
   margin-top: auto; 
   gap: 60px; 
   height: 24px; /* Matches the social-icons height for alignment */
@@ -20,6 +19,13 @@
   transition: all 0.3s ease-in-out;
   white-space: nowrap; 
   
+}
+
+.sidebar-nav a {
+  line-height: 1; 
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: bold;
 }
 
 .sidebar-nav a.active {

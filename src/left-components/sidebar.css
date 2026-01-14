@@ -3,8 +3,9 @@ html, body {
   padding: 0;
   background: linear-gradient(135deg, #ffffff 0%, #f8fafc 45%, #e2e8f0 100%);
   color: #000000;  /* Recommended for this look */
-  overflow: hidden; /* Temporarily disables scrolling for editing */
-  height: 100%; 
+  overflow-x: hidden; /* Only hide horizontal scroll to prevent "wiggle" */
+  width: 100%;
+  min-height: 100vh;
 }
 
 /* Container to center the content on large screens */
@@ -19,9 +20,9 @@ html, body {
 .content-wrapper {
   display: grid;
   grid-template-columns: 45% 55%; 
-  max-width: 1280px;
+  max-width: 100%;
   width: 100%;
-  padding: 0 48px; /* Reduced padding to help everything fit */
+  padding: 0; /* Reduced padding to help everything fit */
   height: 100vh;
 }
 
@@ -33,7 +34,7 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 96px 0 40px 0;
+  padding: 96px 0 60px 0;
   text-align: left;
   box-sizing: border-box;
 }
@@ -75,6 +76,12 @@ html, body {
     mask-image: radial-gradient(circle, black 63%, rgba(0, 0, 0, 0) 95%);
     -webkit-mask-image: radial-gradient(circle, black 63%, rgba(0, 0, 0, 0) 95%);
     border-radius: 200px;
+}
+
+.sidebar-footer {
+  height: 24px; 
+  display: flex;
+  align-items: center;
 }
 
 .social-icons {
