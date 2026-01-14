@@ -1,5 +1,6 @@
 import './navbar.css';
 
+
 const navLinks = [
     { id: 'about', label: 'About', ja:'紹介' },
     { id: 'projects', label: 'Projects',ja: 'プロジェクト' },
@@ -12,9 +13,10 @@ export function Navbar({ activeId, setActiveId, language }) {
     const handleClick = (link) => {
     if (link.id === 'resume') {
       const a = document.createElement('a');
-      a.href = '/public/Current CS Resume.pdf';                 // path to your PDF in public/
-      a.download = 'Casey_Adams_Resume.pdf'; 
-      document.body.appendChild(a); //makes a new tab
+      const resumePath = `${import.meta.env.BASE_URL}files/Current CS Resume.pdf`.replace(/\/+/g, '/');
+      a.href = resumePath;
+      a.download = 'Casey_Adams_Resume.pdf';
+      document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
     } else {

@@ -22,13 +22,15 @@ export function SideBar({ language, onToggleLanguage }) {
 
     const t = translations[language];
 
+    const baseUrl = import.meta.env.BASE_URL;
+
     return (
         <header className="sidebar">
             <div className="sidebar-top">
                 <h1 className="user-name">{t.name}</h1>
                 <div className="line-element"></div>
                 <h2 className="user-title">{t.title}</h2>
-                <img src="src/assets/seflie5.jpg" className="image" />
+                <img src={`${baseUrl}images/seflie5.jpg`.replace(/\/+/g, '/')} className="image" />
                 <p className="user-description">
                     {t.description}
                 </p>
