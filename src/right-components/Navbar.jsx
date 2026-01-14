@@ -6,24 +6,35 @@ const navLinks = [
     { id: 'resume', label: 'Resume', ja: '履歴書' },
 ];
 
-export function Navbar({ activeId, setActiveId, language }) {
-    return (
-        <nav className="sidebar-nav">
-            {navLinks.map((link) => (
-                <a
-                    key={link.id}
-                    href={`#${link.id}`}
-                    className={activeId === link.id ? 'active' : ''}
-                    onClick={() => {
-                        setActiveId(link.id);
-                    }}
-                >
-                    {language === 'ja' ? link.ja : link.label}
-                    </a>
-            ))}
-        </nav>
-    );
-}
+//href={`#${link.id}`}
 
+export function Navbar({ activeId, setActiveId, language }) {
+    const handleClick = (link) => {
+    if (link.id === 'resume') {
+      const a = document.createElement('a');
+      a.href = '/public/Current CS Resume.pdf';                 // path to your PDF in public/
+      a.download = 'Casey_Adams_Resume.pdf'; 
+      document.body.appendChild(a); //makes a new tab
+      a.click();
+      document.body.removeChild(a);
+    } else {
+      setActiveId(link.id);
+    }
+  };
+
+  return (
+    <nav className="sidebar-nav">
+      {navLinks.map((link) => (
+        <a
+          key={link.id}
+          className={activeId === link.id ? 'active' : ''}
+          onClick={() => handleClick(link)}
+        >
+          {language === 'ja' ? link.ja : link.label}
+        </a>
+      ))}
+    </nav>
+  );
+}
 
 

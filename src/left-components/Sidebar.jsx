@@ -36,10 +36,13 @@ export function SideBar({ language, onToggleLanguage }) {
 
             <div className="sidebar-footer">
                 <div className="social-icons">
-                    <a href="https://github.com" target="_blank" rel="noreferrer"><FaGithub size={24} /></a>
-                    <a href="https://instagram.com" target="_blank" rel="noreferrer"><FaInstagram size={24} /></a>
-                    <a href="https://linkedin.com" target="_blank" rel="noreferrer"><FaLinkedin size={24} /></a>
-                    <a href="mailto:CFAdams10@gmail.com"><FaEnvelope size={24} /></a>
+                    <a href="https://github.com/14th-August" target="_blank" rel="noreferrer"><FaGithub size={24} /></a>
+                    <a href="https://www.instagram.com/adams.kc/" target="_blank" rel="noreferrer"><FaInstagram size={24} /></a>
+                    <a href="https://linkedin.com/in/cfa2026/" target="_blank" rel="noreferrer"><FaLinkedin size={24} /></a>
+                    <a href="https://mail.google.com/mail/?view=cm&to=CFAdams10@gmail.com"
+                       target="_blank"
+                       rel="noopener noreferrer"><FaEnvelope size={24} />
+                    </a>
                     
                     <button 
                         className="icon-button" 
