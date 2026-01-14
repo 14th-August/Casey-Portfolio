@@ -33,7 +33,7 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 96px 0; /* Vertical spacing */
+  padding: 96px 0 40px 0;
   text-align: left;
   box-sizing: border-box;
 }
@@ -80,8 +80,9 @@ html, body {
 .social-icons {
   display: flex;
   align-items: center;
-  padding-top: 20px;
+  height: 24px; 
   gap: 24px;
+  padding-top: 0; /* Changed from 20px to 0 to align with Navbar */
 }
 
 .social-icons a, 

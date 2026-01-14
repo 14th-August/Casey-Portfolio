@@ -4,11 +4,10 @@
   width: 100%; 
   justify-content: center; /* Centers the links in the main-content column */
   align-items: center;
-  
-  /* FIXED: Removed padding-left: 220px; */
-  /* Using gaps is better for stability than left-padding */
-  gap: 120px; 
-  padding: 20px 0; 
+  padding: 0 0 40px 0; 
+  margin-top: auto; 
+  gap: 60px; 
+  height: 24px; /* Matches the social-icons height for alignment */
 }
 
 .sidebar-nav {
