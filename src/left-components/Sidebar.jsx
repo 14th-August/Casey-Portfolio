@@ -23,6 +23,7 @@ export function SideBar({ language, onToggleLanguage }) {
     const t = translations[language];
 
     const baseUrl = import.meta.env.BASE_URL;
+    const imagePath = `${baseUrl}/images/seflie5.jpg`.replace(/\/+/g, '/');
 
     return (
         <header className="sidebar">
@@ -30,7 +31,7 @@ export function SideBar({ language, onToggleLanguage }) {
                 <h1 className="user-name">{t.name}</h1>
                 <div className="line-element"></div>
                 <h2 className="user-title">{t.title}</h2>
-                <img src={`${baseUrl}images/seflie5.jpg`.replace(/\/+/g, '/')} className="image" />
+                <img src={imagePath} className="image" alt="Profile" />
                 <p className="user-description">
                     {t.description}
                 </p>
